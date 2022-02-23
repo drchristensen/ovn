@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# set | grep PATH
+
+# exit 0
+
 # Create the first logical switch with one port
 ovn-nbctl ls-add sw0
 ovn-nbctl lsp-add sw0 sw0-port1

@@ -1,0 +1,28 @@
+# Variables used by various scripts for maxpod tests
+
+# This bridge is normally created by the OVN sandbox and has a fixed
+# name.  Only change if you've modified the OVN sandbox script.
+OVS_BRIDGE="br-int"
+
+# Number of routers
+# CURRENTLY ONLY SUPPORTS 1!!!
+MAX_LOGICAL_ROUTERS=1
+# ToDo: Implement router CIDR as an array
+ROUTER_NETWORK="10.0.0.0"
+ROUTER_NETMASK="24"
+ROUTER_CIDR="$ROUTER_NETWORK/$ROUTER_NETMASK"
+LOGICAL_ROUTER_NAME="lr"
+LOGICAL_ROUTER_PORT_NAME="p"
+
+# Number of switches and ports should be < 1000
+MAX_LOGICAL_SWITCHES=2
+MAX_PORTS_PER_LOGICAL_SWITCH=2
+LOGICAL_SWITCH_NAME="sw"
+LOGICAL_SWITCH_PORT_NAME="p"
+LOGICAL_SWITCH_UPLINK_NAME="attachment"
+
+# Container image repository
+CONT_REPO="localhost/busypod:latest"
+
+MAX_POD=512
+
